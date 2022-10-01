@@ -6,6 +6,7 @@ import Authenticate from './pages/Authenticate/Authenticate';
 import Activate from './pages/Activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
 import { useSelector } from 'react-redux';
+import Room from './pages/Room/Room';
 
 function App() {
     return (
@@ -23,6 +24,9 @@ function App() {
                 </SemiProtectedRoute>
                 <ProtectedRoute path="/rooms">
                     <Rooms />
+                </ProtectedRoute>
+                <ProtectedRoute path="/room/:id">
+                    <Room />
                 </ProtectedRoute>
             </Switch>
         </BrowserRouter>
